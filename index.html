@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LAYARIN — Nonton film & serial</title>
+<meta name="description" content="LAYARIN — antarmuka situs streaming: katalog film dan serial, daftar tontonan, dan pemutar video lengkap.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230a0a0c'/><path d='M11 8v16l12-8z' fill='%23ff4761'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="index.html">LAYAR<span>IN</span></a>
+  <nav class="nav-links">
+    <button data-view="beranda" aria-current="true">Beranda</button>
+    <button data-view="film">Film</button>
+    <button data-view="serial">Serial</button>
+    <button data-view="list">Daftar Saya</button>
+  </nav>
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+    <input id="q" type="search" placeholder="Cari judul, genre, pemeran…" aria-label="Cari">
+  </div>
+  <div class="avatar" title="Profil"></div>
+</header>
+
+<main>
+  <section class="hero" id="hero"></section>
+  <div class="rows" id="rows"></div>
+  <section class="grid-view" id="grid-view" hidden></section>
+</main>
+
+<footer class="footer">
+  <p>
+    <strong>LAYARIN</strong> — proyek demo antarmuka streaming. Seluruh judul, sinopsis, dan
+    nama pemeran di katalog ini fiktif; berkas video memakai contoh publik untuk menguji pemutar.
+  </p>
+  <p>
+    Tekan <kbd>/</kbd> untuk mencari. &copy; <span id="year"></span> ·
+    <a href="https://github.com/Yudhitridarmawan/Yudhitridarmawan">Kode sumber</a>
+  </p>
+</footer>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
