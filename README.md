@@ -59,6 +59,7 @@ assets/js/data.js   katalog + helper format
 assets/js/store.js  localStorage: Daftar Saya & posisi tonton
 assets/js/app.js    logika beranda
 assets/js/watch.js  logika pemutar
+assets/media/       cuplikan demo 20 detik per judul (H.264 MP4)
 ```
 
 ## Mengganti isinya
@@ -80,7 +81,7 @@ Seluruh katalog ada di `assets/js/data.js` sebagai satu array. Tiap judul:
   cast: ["Nama Pemeran"],
   director: "Nama Sutradara",
   synopsis: "…",
-  src: "https://…/film.mp4", // sumber video
+  src: "assets/media/x.mp4", // sumber video: path lokal atau URL https
   episodes: [                // hanya untuk type "series"
     { n: 1, title: "Judul Episode", dur: 2820, desc: "…" },
   ],
@@ -95,9 +96,10 @@ ganti pemanggilan `ART.poster()` / `ART.backdrop()` dengan URL gambarmu.
 
 - Semua judul, sinopsis, nama pemeran, dan sutradara di katalog ini **fiktif**,
   dibuat untuk demo antarmuka.
-- Berkas videonya memakai contoh publik dari *Google sample video bucket*
-  supaya pemutar bisa diuji. Sumber ini di luar situs, jadi bisa terblokir
-  jaringan tertentu — kalau itu terjadi, pemutar menampilkan pesan error dan
-  tombol coba lagi. Ganti `src` dengan sumber milikmu untuk penggunaan nyata.
+- Tiap judul punya cuplikan demo 20 detik di `assets/media/`: latar gradien
+  bergerak dengan warna khas judul itu, kartu judul, sinopsis, dan musik
+  latar ambient. Semuanya dibuat khusus untuk demo ini, jadi bebas dipakai.
+  Ganti `src` dengan sumber milikmu untuk penggunaan nyata. Kalau berkas
+  gagal dimuat, pemutar menampilkan pesan error dan tombol coba lagi.
 - Daftar Saya dan posisi tontonan disimpan di `localStorage` peramban, hanya di
   perangkat itu saja.

@@ -1,10 +1,10 @@
 /* Katalog demo.
    Semua judul & sinopsis di bawah ini fiktif (dibuat untuk demo UI).
-   Sumber video memakai berkas contoh publik dari Google sample video bucket
-   sehingga pemutar bisa diuji tanpa aset berbayar. Ganti `src` dengan
-   sumber milikmu sendiri saat dipakai sungguhan. */
+   Tiap judul punya cuplikan demo 20 detik di assets/media/ yang ikut
+   dihosting bersama situs, jadi pemutar jalan tanpa server video lain.
+   Ganti `src` dengan sumber milikmu sendiri saat dipakai sungguhan. */
 
-const VID = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/";
+const MEDIA = "assets/media/";
 
 const CATALOG = [
   {
@@ -24,7 +24,7 @@ const CATALOG = [
     cast: ["Dewi Anggraini", "Bima Prasetyo", "Laras Wijayanti"],
     synopsis:
       "Seorang sopir angkot di pinggiran kota menemukan buku harian penumpang yang tertinggal, dan perlahan ikut menelusuri kisah hidup pemiliknya sampai ke kampung halamannya sendiri.",
-    src: VID + "ForBiggerEscapes.mp4",
+    src: MEDIA + "senja-di-ujung-jalan.mp4",
   },
   {
     id: "kode-merah",
@@ -42,7 +42,7 @@ const CATALOG = [
     cast: ["Reza Mahendra", "Nadia Kusuma", "Farhan Idris"],
     synopsis:
       "Tim forensik siber sebuah bank menemukan celah keamanan yang sudah dipakai orang dalam selama bertahun-tahun. Semakin dalam mereka menggali, semakin sedikit orang yang bisa dipercaya.",
-    src: VID + "ForBiggerBlazes.mp4",
+    src: MEDIA + "kode-merah.mp4",
     episodes: [
       { n: 1, title: "Pintu Belakang", dur: 2820, desc: "Sebuah transaksi janggal jam tiga pagi memicu audit dadakan yang tidak diminta siapa pun." },
       { n: 2, title: "Jejak yang Dihapus", dur: 2760, desc: "Log server hilang semalam. Rekaman CCTV lantai sembilan ikut menyusul." },
@@ -65,7 +65,7 @@ const CATALOG = [
     cast: ["Gilang Mahesa", "Ayu Ratnasari", "Dimas Hartono"],
     synopsis:
       "Unit gawat darurat rumah sakit tertua di kota harus bertahan dengan separuh anggaran dan dua kali lipat pasien, sementara para dokter mudanya belajar kapan harus melepaskan.",
-    src: VID + "ForBiggerJoyrides.mp4",
+    src: MEDIA + "nadi-kota.mp4",
     episodes: [
       { n: 1, title: "Shift Pertama", dur: 2640, desc: "Hari pertama seorang residen bertepatan dengan malam paling sibuk dalam setahun." },
       { n: 2, title: "Ruang Tunggu", dur: 2580, desc: "Keluarga pasien menunggu kabar yang tak kunjung datang dari balik pintu merah." },
@@ -89,7 +89,7 @@ const CATALOG = [
     cast: ["Tara Widjaja", "Yosef Lumban", "Kirana Dewi"],
     synopsis:
       "Sebuah stasiun riset di orbit Jupiter menerima sinyal berulang dari bawah lapisan es Europa. Kru yang dikirim untuk memverifikasinya hanya punya bekal oksigen sembilan hari.",
-    src: VID + "Sintel.mp4",
+    src: MEDIA + "gerbang-antariksa.mp4",
   },
   {
     id: "tawa-di-warung-kopi",
@@ -106,7 +106,7 @@ const CATALOG = [
     cast: ["Rizky Aditya", "Mega Puspita", "Joko Pranoto"],
     synopsis:
       "Lima pelanggan tetap sebuah warung kopi 24 jam memperdebatkan segala hal kecuali masalah mereka sendiri. Setiap episode, satu kursi kosong.",
-    src: VID + "ForBiggerFun.mp4",
+    src: MEDIA + "tawa-di-warung-kopi.mp4",
     episodes: [
       { n: 1, title: "Kopi Tubruk Terakhir", dur: 1440, desc: "Gilingan kopi rusak tepat saat pesanan paling penting datang." },
       { n: 2, title: "Wifi Gratis", dur: 1380, desc: "Kata sandi berganti dan seisi warung kehilangan arah hidup." },
@@ -129,7 +129,7 @@ const CATALOG = [
     cast: ["Panji Baskara", "Sinta Meilani", "Rangga Putra"],
     synopsis:
       "Tim pemetaan hutan menemukan desa yang tidak tercantum di peta mana pun. Penduduknya ramah, sopan, dan tak satu pun muncul di hasil foto udara.",
-    src: VID + "ForBiggerMeltdowns.mp4",
+    src: MEDIA + "bayang-di-hutan.mp4",
   },
   {
     id: "lintasan-terakhir",
@@ -147,7 +147,7 @@ const CATALOG = [
     cast: ["Andra Wibowo", "Cindy Halim", "Bagas Nugroho"],
     synopsis:
       "Pembalap reli yang dipaksa pensiun karena cedera melatih anak montir dari bengkel pinggir kota untuk satu musim terakhir yang mustahil.",
-    src: VID + "SubaruOutbackOnStreetAndDirt.mp4",
+    src: MEDIA + "lintasan-terakhir.mp4",
   },
   {
     id: "arsip-1965",
@@ -165,7 +165,7 @@ const CATALOG = [
     cast: ["Narasi oleh Arif Santosa"],
     synopsis:
       "Empat kotak dokumen yang ditemukan di gudang sebuah percetakan tua membuka kembali pertanyaan yang sudah dianggap selesai selama enam dekade.",
-    src: VID + "ElephantsDream.mp4",
+    src: MEDIA + "arsip-1965.mp4",
     episodes: [
       { n: 1, title: "Kotak Pertama", dur: 3000, desc: "Segel yang tak pernah dibuka sejak percetakan berhenti beroperasi." },
       { n: 2, title: "Nama-nama", dur: 2880, desc: "Daftar panjang tanpa keterangan, ditulis dengan tiga jenis tinta berbeda." },
@@ -189,7 +189,7 @@ const CATALOG = [
     cast: ["Tara Widjaja", "Eko Mahendra", "Prita Larasati"],
     synopsis:
       "Di kota yang dijaga mesin otonom, seorang teknisi perbaikan menemukan bahwa robot-robot itu mulai menyimpan ingatan yang seharusnya dihapus setiap malam.",
-    src: VID + "TearsOfSteel.mp4",
+    src: MEDIA + "besi-dan-air-mata.mp4",
   },
   {
     id: "pulau-tanpa-nama",
@@ -207,7 +207,7 @@ const CATALOG = [
     cast: ["Kenzo Aditama", "Nayla Sabrina", "Om Darmo"],
     synopsis:
       "Tiga anak nelayan berlayar mencari pulau yang katanya cuma ada di cerita kakek mereka — dan menemukan sesuatu yang jauh lebih aneh.",
-    src: VID + "BigBuckBunny.mp4",
+    src: MEDIA + "pulau-tanpa-nama.mp4",
   },
   {
     id: "jalur-utara",
@@ -224,7 +224,7 @@ const CATALOG = [
     cast: ["Tim Ekspedisi Jalur Utara"],
     synopsis:
       "Perjalanan darat 4.000 kilometer menyusuri jalur pantai utara, singgah di kota-kota yang tak pernah masuk brosur wisata.",
-    src: VID + "WeAreGoingOnBullrun.mp4",
+    src: MEDIA + "jalur-utara.mp4",
     episodes: [
       { n: 1, title: "Kilometer Nol", dur: 2400, desc: "Rencana enam bulan, dua mobil, dan satu peta yang sudah kedaluwarsa." },
       { n: 2, title: "Kota yang Dilewati", dur: 2340, desc: "Berhenti di tempat yang biasanya cuma jadi papan petunjuk." },
@@ -246,7 +246,7 @@ const CATALOG = [
     cast: ["Laras Wijayanti", "Bima Prasetyo"],
     synopsis:
       "Dua orang asing berteduh di halte yang sama setiap sore selama musim hujan, tanpa pernah bertukar nama sampai hari terakhir.",
-    src: VID + "WhatCarCanYouGetForAGrand.mp4",
+    src: MEDIA + "sebelum-hujan.mp4",
   },
 ];
 
